@@ -5,6 +5,7 @@ local servers = {
 	clangd = {},
 	cssls = {},
 	dockerls = {},
+	docker_compose_language_service = {},
 	emmet_language_server = {},
 	eslint = {},
 	gopls = {},
@@ -16,6 +17,7 @@ local servers = {
 	rust_analyzer = {},
 	tailwindcss = {},
 	ts_ls = {},
+	jsonls = {},
 }
 
 for server, config in pairs(servers) do

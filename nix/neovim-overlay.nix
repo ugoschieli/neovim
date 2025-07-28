@@ -38,7 +38,14 @@ final: prev: let
     stylua
     typescript-language-server
     vscode-langservers-extracted
+    emmet-language-server
     prettierd
+    dockerfile-language-server-nodejs
+    docker-compose-language-service
+    gopls
+    haskell-language-server
+    tailwindcss-language-server
+    clang-tools
   ];
 in {
   myneovim = pkgs.callPackage ./mkNeovim.nix {
