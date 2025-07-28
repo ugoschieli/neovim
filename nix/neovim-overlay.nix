@@ -36,6 +36,9 @@ final: prev: let
   extraPackages = with pkgs; [
     lua-language-server
     stylua
+    typescript-language-server
+    vscode-langservers-extracted
+    prettierd
   ];
 in {
   myneovim = pkgs.callPackage ./mkNeovim.nix {
