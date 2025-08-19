@@ -1,5 +1,11 @@
 final: prev: let 
   pkgs = prev;
+  vim = pkgs.vimPlugins;
+
+  obsidian = vim.obsidian-nvim.overrideAttrs {
+    # dependencies = [ vim.telescope-nvim ];
+    nvimSkipModules = [ "obsidian.pickers._fzf" "minimal" ];
+  };
 
   plugins = with pkgs.vimPlugins; [
     blink-cmp
@@ -46,6 +52,7 @@ final: prev: let
     haskell-language-server
     tailwindcss-language-server
     clang-tools
+    lldb
   ];
 in {
   myneovim = pkgs.callPackage ./mkNeovim.nix {

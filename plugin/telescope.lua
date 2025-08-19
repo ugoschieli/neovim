@@ -25,6 +25,9 @@ map("<leader>fa", function()
 end, "Find all files")
 
 local opts = {
+	defaults = {
+		file_ignore_patterns = { "^.git" },
+	},
 	pickers = {
 		find_files = {
 			hidden = true,
