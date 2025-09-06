@@ -53,6 +53,7 @@ final: prev: let
     tailwindcss-language-server
     clang-tools
     lldb
+    wgsl-analyzer
   ];
 in {
   myneovim = pkgs.callPackage ./mkNeovim.nix {

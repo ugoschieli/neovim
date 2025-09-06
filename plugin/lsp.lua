@@ -18,6 +18,7 @@ local servers = {
 	tailwindcss = {},
 	ts_ls = {},
 	jsonls = {},
+	wgsl_analyzer = {},
 }
 
 for server, config in pairs(servers) do
