@@ -10,6 +10,7 @@ local opts = {
 		html = { "prettierd" },
 		css = { "prettierd" },
 		json = { "prettierd" },
+		jsonc = { "prettierd" },
 		vue = { "prettierd" },
 	},
 	formatters = {
