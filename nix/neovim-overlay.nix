@@ -26,7 +26,7 @@ final: prev: let
     nvim-nio
     nvim-surround
     nvim-treesitter.withAllGrammars
-    nvim-treesitter-textobjects
+    # nvim-treesitter-textobjects
     nvim-ts-autotag
     nvim-web-devicons
     oil-nvim
