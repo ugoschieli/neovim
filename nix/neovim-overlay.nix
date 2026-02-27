@@ -45,6 +45,7 @@ final: prev: let
     typescript-language-server
     vscode-langservers-extracted
     emmet-language-server
+    biome
     prettierd
     dockerfile-language-server-nodejs
     docker-compose-language-service

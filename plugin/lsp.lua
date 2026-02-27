@@ -8,6 +8,7 @@ local servers = {
 	docker_compose_language_service = {},
 	emmet_language_server = {},
 	eslint = {},
+	biome = {},
 	gopls = {},
 	hls = {
 		filetypes = { "haskell", "lhaskell", "cabal" },
