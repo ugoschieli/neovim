@@ -9,6 +9,7 @@ map("<C-h>", "<C-w><C-h>", "Move focus to the left window")
 map("<C-l>", "<C-w><C-l>", "Move focus to the right window")
 map("<C-j>", "<C-w><C-j>", "Move focus to the lower window")
 map("<C-k>", "<C-w><C-k>", "Move focus to the upper window")
+map("<leader>bd", "<Cmd>lua MiniBufremove.delete()<CR>", "Delete current buffer")
 map("<leader>d", vim.diagnostic.open_float, "Show line diagnostics")
 map("<leader>q", vim.diagnostic.setloclist, "Open file diagnostics in quickfix list")
 map("<leader>Q", vim.diagnostic.setqflist, "Open project diagnostics in quickfix list")
@@ -27,6 +28,9 @@ function M.on_attach(_, buffer)
 	map("gi", vim.lsp.buf.implementation, "Go to implementation", nil, opts)
 	map("<leader>D", vim.lsp.buf.type_definition, "Show type definition", nil, opts)
 	map("<leader>rn", vim.lsp.buf.rename, "Rename symbol", nil, opts)
+	map("<leader>ca", function()
+		require("tiny-code-action").code_action()
+	end, "Code action", { "n", "v" }, opts)
 end
 
 return M

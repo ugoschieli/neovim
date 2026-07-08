@@ -15,11 +15,21 @@ local servers = {
 	},
 	html = {},
 	lua_ls = {},
-	rust_analyzer = {},
+	rust_analyzer = {
+		settings = {
+			["rust-analyzer"] = {
+				check = {
+					command = "clippy",
+				},
+			},
+		},
+	},
 	tailwindcss = {},
 	ts_ls = {},
 	jsonls = {},
-	wgsl_analyzer = {},
+	wgsl_analyzer = {
+		filetypes = { "wgsl", "wesl" },
+	},
 }
 
 for server, config in pairs(servers) do

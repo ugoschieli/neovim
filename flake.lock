@@ -78,7 +78,45 @@
     "root": {
       "inputs": {
         "neovim": "neovim",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "rust-overlay": "rust-overlay",
+        "wgsl-analyzer-src": "wgsl-analyzer-src"
+      }
+    },
+    "rust-overlay": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1782616745,
+        "narHash": "sha256-NN5B1cKBXF6h1Ec681gMGZ2o/99d7vKXAAfFNEvyOKA=",
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "rev": "b916d014dc57eb555f84e51172a82f7f6fb560d7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "type": "github"
+      }
+    },
+    "wgsl-analyzer-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1782472874,
+        "narHash": "sha256-v1rJOJNdREVj8s3boQunUmKHVvasJ6HYein1tXWj6Mw=",
+        "owner": "wgsl-analyzer",
+        "repo": "wgsl-analyzer",
+        "rev": "8d94b5f042004837e88ca83afa50c5bfbeaabf06",
+        "type": "github"
+      },
+      "original": {
+        "owner": "wgsl-analyzer",
+        "repo": "wgsl-analyzer",
+        "type": "github"
       }
     }
   },

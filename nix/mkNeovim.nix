@@ -16,17 +16,20 @@
         ../lua
         ../plugin
         ../ftplugin
+        ../ftdetect
       ];
     };
     buildPhase = ''
       mkdir -p $out/lua
       mkdir -p $out/plugin
       mkdir -p $out/ftplugin
+      mkdir -p $out/ftdetect
     '';
     installPhase = ''
       cp -r lua $out/lua
       cp -r plugin $out/plugin
       cp -r ftplugin $out/ftplugin
+      cp -r ftdetect $out/ftdetect
     '';
   };
 
@@ -44,6 +47,7 @@
     vim.opt.rtp:prepend('${nvimRtp}/lua')
     vim.opt.rtp:prepend('${nvimRtp}/plugin')
     vim.opt.rtp:prepend('${nvimRtp}/ftplugin')
+    vim.opt.rtp:prepend('${nvimRtp}/ftdetect')
     ${treesitterPath}''
   + (builtins.readFile ../init.lua);
 

@@ -27,6 +27,10 @@ vim.api.nvim_create_autocmd("FileType", {
 	callback = function()
 		local buf = vim.api.nvim_get_current_buf()
 		pcall(vim.treesitter.start, buf)
+
+		vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
+		vim.wo[0][0].foldmethod = "expr"
+		vim.wo.foldlevel = 99
 	end,
 	desc = "Enable treesitter highlighting for all filetypes",
 })
